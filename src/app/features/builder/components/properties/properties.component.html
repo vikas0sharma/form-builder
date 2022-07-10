@@ -1,0 +1,9 @@
+<div *ngIf="properties">
+	<input class="form-control form-control-sm"  type="text" [(value)]="properties.name">
+	<p>{{properties.name}}</p>
+	<select class="form-select">
+		<option selected>Type</option>
+		<option value="1">Single line text</option>
+		<option value="2">Paragraph text</option>
+	</select>
+</div>
