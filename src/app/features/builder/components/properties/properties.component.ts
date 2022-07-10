@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FormItemType } from '../../models/form-item-type.enum';
 import { Properties } from '../../models/properties.model';
 import { FormBuilderService } from '../../services/form-builder.service';
 
@@ -12,12 +13,18 @@ export class PropertiesComponent implements OnInit {
   }
   properties: any;
   id: string | undefined = '';
+
   ngOnInit(): void {
     this.formBuilderService.selectedFormItem$.subscribe(selected => {
       this.properties = selected?.data;
-      this.id = selected?.id;
+      this.id = selected?.data.id;
     });
-    //setInterval(() =>{if(this.properties) this.properties.name ='changed' },1000)
+  }
+  onTypeChange($event: any) {
+    const value = Number($event.value);
+    if (value != -1) {
+      this.formBuilderService.updateItemType(value);
+    }
   }
 
 }

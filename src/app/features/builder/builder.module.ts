@@ -7,6 +7,9 @@ import { DynamicFormDirective } from './directives/dynamic-form.directive';
 import { PropertiesComponent } from './components/properties/properties.component';
 import { ParagraphComponent } from './components/paragraph/paragraph.component';
 import { FormItemOptionsComponent } from './components/form-item-options/form-item-options.component';
+import { FormsModule } from '@angular/forms';
+import { FormItemContainerComponent } from './components/form-item-container/form-item-container.component';
+import { TextFieldComponent } from './components/text-field/text-field.component';
 
 
 @NgModule({
@@ -17,10 +20,13 @@ import { FormItemOptionsComponent } from './components/form-item-options/form-it
     PropertiesComponent,
     ParagraphComponent,
     FormItemOptionsComponent,
+    FormItemContainerComponent,
+    TextFieldComponent
   ],
   imports: [
     CommonModule,
-    BuilderRoutingModule
+    FormsModule,
+    BuilderRoutingModule,
   ]
 })
 export class BuilderModule { }

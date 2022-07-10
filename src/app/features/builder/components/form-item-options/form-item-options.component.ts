@@ -13,10 +13,10 @@ export class FormItemOptionsComponent implements OnInit {
   constructor(private formBuilderService: FormBuilderService) { }
 
   addSingleLineText() {
-    this.formBuilderService.addFormItem(FormItemComponent.CreateComponent('single line text', FormItemType.TextField));
+    this.formBuilderService.addFormItem(FormItemComponent.CreateComponent('Untitled', FormItemType.TextField));
   }
   addParagraphText() {
-    this.formBuilderService.addFormItem(FormItemComponent.CreateComponent('paragraph text', FormItemType.Paragraph));
+    this.formBuilderService.addFormItem(FormItemComponent.CreateComponent('Untitled', FormItemType.Paragraph));
   }
   ngOnInit(): void {
   }

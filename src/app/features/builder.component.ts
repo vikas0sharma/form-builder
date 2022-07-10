@@ -24,7 +24,7 @@ export class BuilderComponent implements OnInit {
           componentRef.instance.data = item.data;
           // add `click` event handler to the component
           fromEvent(componentRef.location.nativeElement, 'click')
-            .subscribe(() => this.formBuilderService.selectItem(item.id));
+            .subscribe(() => this.formBuilderService.selectItem(item.data.id));
         });
       });
     }
