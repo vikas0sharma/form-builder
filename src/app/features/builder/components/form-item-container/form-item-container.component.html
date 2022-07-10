@@ -1,0 +1,7 @@
+<div class="m-2 cls" [ngClass]="{'selected': isSelected}">
+	<ng-content></ng-content>
+	<div *ngIf="isSelected">
+		<button type="button" class="btn btn-outline-success m-2">+</button>
+		<button type="button" class="btn btn-outline-danger">-</button>
+	</div>
+</div>
