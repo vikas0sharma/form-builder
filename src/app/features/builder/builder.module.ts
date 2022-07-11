@@ -10,6 +10,7 @@ import { FormItemOptionsComponent } from './components/form-item-options/form-it
 import { FormsModule } from '@angular/forms';
 import { FormItemContainerComponent } from './components/form-item-container/form-item-container.component';
 import { TextFieldComponent } from './components/text-field/text-field.component';
+import { FormComponent } from './components/form/form.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { TextFieldComponent } from './components/text-field/text-field.component
     ParagraphComponent,
     FormItemOptionsComponent,
     FormItemContainerComponent,
-    TextFieldComponent
+    TextFieldComponent,
+    FormComponent
   ],
   imports: [
     CommonModule,

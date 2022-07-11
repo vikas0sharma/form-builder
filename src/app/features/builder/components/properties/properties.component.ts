@@ -16,6 +16,7 @@ export class PropertiesComponent implements OnInit {
 
   ngOnInit(): void {
     this.formBuilderService.selectedFormItem$.subscribe(selected => {
+      debugger;
       this.properties = selected?.data;
       this.id = selected?.data.id;
     });

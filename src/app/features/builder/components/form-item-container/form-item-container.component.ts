@@ -15,5 +15,11 @@ export class FormItemContainerComponent implements OnInit {
       this.isSelected = s?.data.id === this.id;
     });
   }
+  deleteItem(){
+    this.formBuilderService.deleteItem(this.id as string);
+  }
+  cloneItem(){
+    this.formBuilderService.cloneItem(this.id as string);
+  }
 
 }
